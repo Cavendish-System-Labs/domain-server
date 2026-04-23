@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Error</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:100%;height:100%;overflow:hidden}
+  .ep-wrap{
+    color-scheme:light only;
+    forced-color-adjust:none;
+    -webkit-text-size-adjust:100%;
+    background:#e8f2fb;
+    width:100%;
+    height:100vh;
+    height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    position:relative;
+    padding:clamp(0.75rem,3vh,2rem) 1rem;
+    font-family:Georgia,serif;
+  }
+  .ep-numbers{
+    display:flex;
+    gap:clamp(0.2rem,1.5vw,0.5rem);
+    margin-bottom:clamp(0.75rem,2.5vh,1.5rem);
+    position:relative;
+    z-index:2;
+    flex-shrink:0;
+  }
+  .ep-digit{
+    width:clamp(60px,14vw,110px);
+    height:clamp(74px,17vw,130px);
+    flex-shrink:0;
+  }
+  .ep-digit svg{width:100%;height:100%}
+  .ep-title{
+    font-size:clamp(1rem,3.5vw,1.6rem);
+    font-weight:700;
+    color:#2a4a6b;
+    text-align:center;
+    z-index:2;
+    position:relative;
+    margin-bottom:clamp(0.3rem,1vh,0.5rem);
+    padding:0 0.5rem;
+    flex-shrink:0;
+  }
+  .ep-msg{
+    font-size:clamp(0.78rem,2vw,0.95rem);
+    color:#5a7a9b;
+    text-align:center;
+    max-width:340px;
+    line-height:1.6;
+    z-index:2;
+    position:relative;
+    font-family:system-ui,sans-serif;
+    padding:0 1rem;
+    flex-shrink:0;
+  }
+  .ep-btn{
+    margin-top:clamp(0.75rem,2.5vh,1.5rem);
+    padding:clamp(0.5rem,1.5vh,0.7rem) 2rem;
+    border-radius:999px;
+    border:none;
+    background:#4a90d9;
+    color:#ffffff;
+    font-size:clamp(0.85rem,2vw,0.95rem);
+    cursor:pointer;
+    z-index:2;
+    position:relative;
+    font-family:system-ui,sans-serif;
+    font-weight:600;
+    letter-spacing:0.03em;
+    transition:background 0.2s,transform 0.1s;
+    -webkit-appearance:none;
+    appearance:none;
+    flex-shrink:0;
+  }
+  .ep-btn:hover{background:#2a6db5}
+  .ep-btn:active{transform:scale(0.97)}
+  .chase-arena{
+    position:absolute;
+    inset:0;
+    z-index:999;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .yarn-el,.cat-el{position:absolute;will-change:transform}
+  .dot{
+    position:absolute;
+    border-radius:50%;
+    opacity:0.35;
+    animation:fdot 8s ease-in-out infinite;
+    pointer-events:none;
+    z-index:1;
+  }
+  @keyframes fdot{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+</style>
+</head>
+<body>
+
+<div class="ep-wrap">
+  <div class="dot" style="width:16px;height:16px;background:#b5d4f4;top:12%;left:8%;animation-delay:0s"></div>
+  <div class="dot" style="width:11px;height:11px;background:#f9b8d0;top:20%;right:10%;animation-delay:1.5s"></div>
+  <div class="dot" style="width:20px;height:20px;background:#b5ead7;top:72%;left:6%;animation-delay:3s"></div>
+  <div class="dot" style="width:10px;height:10px;background:#ffe066;top:65%;right:9%;animation-delay:2s"></div>
+
+  <div class="ep-numbers">
+    <div class="ep-digit"><svg viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="57" cy="104" rx="38" ry="10" fill="#e0a870" opacity="0.35"/>
+      <rect x="17" y="32" width="76" height="76" rx="20" fill="#f5c8a0"/>
+      <path d="M17 42 Q28 18 45 28 Q55 14 65 28 Q82 18 93 42 Q93 36 55 32 Q17 36 17 42Z" fill="#fff8f0"/>
+      <path d="M28 42 Q25 52 27 58" fill="none" stroke="#fff0dc" stroke-width="5" stroke-linecap="round"/>
+      <path d="M80 40 Q83 50 81 57" fill="none" stroke="#fff0dc" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="36" cy="54" rx="5.5" ry="5.5" fill="#ff8fab"/>
+      <ellipse cx="74" cy="48" rx="4.5" ry="4.5" fill="#a0d8ef"/>
+      <ellipse cx="55" cy="57" rx="4" ry="4" fill="#ffe066"/>
+      <ellipse cx="44" cy="66" rx="3.5" ry="3.5" fill="#b5ead7"/>
+      <ellipse cx="67" cy="64" rx="3.5" ry="3.5" fill="#ff8fab"/>
+      <ellipse cx="44" cy="38" rx="12" ry="6" fill="#fff" opacity="0.5"/>
+      <text id="d1" x="55" y="108" text-anchor="middle" font-size="46" font-weight="900" fill="#c87941" font-family="Georgia,serif">4</text>
+    </svg></div>
+    <div class="ep-digit"><svg viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="57" cy="104" rx="38" ry="10" fill="#d470a0" opacity="0.3"/>
+      <rect x="17" y="32" width="76" height="76" rx="20" fill="#f9b8d0"/>
+      <path d="M17 42 Q28 16 48 28 Q55 12 67 28 Q82 16 93 42 Q93 36 55 30 Q17 36 17 42Z" fill="#fde8f2"/>
+      <path d="M26 44 Q23 54 25 60" fill="none" stroke="#fdd6e8" stroke-width="5" stroke-linecap="round"/>
+      <path d="M82 42 Q85 53 83 59" fill="none" stroke="#fdd6e8" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="40" cy="52" rx="4.5" ry="4.5" fill="#ffe066"/>
+      <ellipse cx="70" cy="50" rx="5" ry="5" fill="#a0d8ef"/>
+      <ellipse cx="55" cy="60" rx="3.5" ry="3.5" fill="#b5ead7"/>
+      <ellipse cx="44" cy="68" rx="4" ry="4" fill="#ff8fab"/>
+      <ellipse cx="66" cy="66" rx="3.5" ry="3.5" fill="#ffe066"/>
+      <ellipse cx="43" cy="37" rx="12" ry="6" fill="#fff" opacity="0.45"/>
+      <text id="d2" x="55" y="108" text-anchor="middle" font-size="46" font-weight="900" fill="#b84c7a" font-family="Georgia,serif">0</text>
+    </svg></div>
+    <div class="ep-digit"><svg viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="57" cy="104" rx="38" ry="10" fill="#3da87a" opacity="0.28"/>
+      <rect x="17" y="32" width="76" height="76" rx="20" fill="#b5e8d0"/>
+      <path d="M17 42 Q30 16 46 28 Q55 13 66 28 Q80 16 93 42 Q93 36 55 30 Q17 36 17 42Z" fill="#e0fff4"/>
+      <path d="M27 44 Q24 54 26 60" fill="none" stroke="#c8f5e4" stroke-width="5" stroke-linecap="round"/>
+      <path d="M81 42 Q84 52 82 58" fill="none" stroke="#c8f5e4" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="38" cy="54" rx="4.5" ry="4.5" fill="#ff8fab"/>
+      <ellipse cx="72" cy="51" rx="4" ry="4" fill="#ffe066"/>
+      <ellipse cx="55" cy="59" rx="5.5" ry="5.5" fill="#f9b8d0"/>
+      <ellipse cx="43" cy="68" rx="3.5" ry="3.5" fill="#a0d8ef"/>
+      <ellipse cx="67" cy="67" rx="3.5" ry="3.5" fill="#ff8fab"/>
+      <ellipse cx="44" cy="37" rx="12" ry="6" fill="#fff" opacity="0.45"/>
+      <text id="d3" x="55" y="108" text-anchor="middle" font-size="46" font-weight="900" fill="#1e7a56" font-family="Georgia,serif">4</text>
+    </svg></div>
+  </div>
+
+  <div class="ep-title" id="err-t">Oops — lost in the void</div>
+  <div class="ep-msg" id="err-m">The page you're looking for wandered off somewhere we can't reach. Maybe it moved, maybe it never existed, or maybe it just needed a break.</div>
+  <button class="ep-btn" onclick="history.back()">Take me back</button>
+
+  <div class="chase-arena">
+    <div class="yarn-el" id="yarn">
+      <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="19" cy="19" r="17" fill="#f97b8b"/>
+        <circle cx="19" cy="19" r="17" fill="none" stroke="#e05568" stroke-width="1.5"/>
+        <path d="M5 14 Q19 8 33 14" fill="none" stroke="#e05568" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M4 19 Q19 13 34 19" fill="none" stroke="#e05568" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M5 24 Q19 18 33 24" fill="none" stroke="#e05568" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M14 4 Q10 19 14 34" fill="none" stroke="#e05568" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M24 4 Q28 19 24 34" fill="none" stroke="#e05568" stroke-width="1.4" stroke-linecap="round"/>
+        <ellipse cx="13" cy="13" rx="5" ry="4" fill="#fff" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="cat-el" id="cat">
+      <svg width="62" height="54" viewBox="0 0 62 54" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="9,14 17,2 24,14" fill="#f5c8a0"/>
+        <polygon points="38,14 46,2 53,14" fill="#f5c8a0"/>
+        <polygon points="11,14 17,6 23,14" fill="#ffb8c8"/>
+        <polygon points="39,14 46,6 52,14" fill="#ffb8c8"/>
+        <ellipse cx="31" cy="32" rx="25" ry="19" fill="#f5c8a0"/>
+        <ellipse cx="31" cy="30" rx="21" ry="16" fill="#faebd7"/>
+        <ellipse cx="22" cy="27" rx="5" ry="5" fill="#fff"/>
+        <ellipse cx="22" cy="27" rx="3" ry="3.5" fill="#3a2010"/>
+        <ellipse cx="21" cy="26" rx="1.2" ry="1.2" fill="#fff" opacity="0.9"/>
+        <ellipse cx="40" cy="27" rx="5" ry="5" fill="#fff"/>
+        <ellipse cx="40" cy="27" rx="3" ry="3.5" fill="#3a2010"/>
+        <ellipse cx="39" cy="26" rx="1.2" ry="1.2" fill="#fff" opacity="0.9"/>
+        <ellipse cx="14" cy="34" rx="5" ry="3" fill="#ffb8c8" opacity="0.5"/>
+        <ellipse cx="48" cy="34" rx="5" ry="3" fill="#ffb8c8" opacity="0.5"/>
+        <ellipse cx="31" cy="34" rx="3" ry="2" fill="#e8a090"/>
+        <path d="M25 38 Q31 43 37 38" fill="none" stroke="#c87060" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10" y1="32" x2="1" y2="30" stroke="#d4a888" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="10" y1="35" x2="1" y2="36" stroke="#d4a888" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="52" y1="32" x2="61" y2="30" stroke="#d4a888" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="52" y1="35" x2="61" y2="36" stroke="#d4a888" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M52 46 Q60 36 58 44 Q54 52 52 46Z" fill="#f5c8a0"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  const errorMap = {
+    "404": { t: "Oops — lost in the void", m: "The page you're looking for wandered off somewhere we can't reach. Maybe it moved, maybe it never existed, or maybe it just needed a break." },
+    "403": { t: "Access denied — this door stays closed", m: "The page you're trying to reach is off-limits. You may not have permission, or it may require credentials we didn't receive." },
+    "500": { t: "Something went wrong behind the scenes", m: "The server encountered an issue and couldn't complete your request. It's not something you caused — we're working to fix it." },
+    "502": { t: "Bad gateway — the signal got crossed", m: "The server received an invalid response from an upstream source. Something along the chain didn't communicate properly." },
+    "503": { t: "Service unavailable — taking a short pause", m: "The server is currently unable to handle the request. It may be overloaded or undergoing maintenance. Please try again soon." },
+    "504": { t: "Timeout — the response took too long", m: "The server waited for a response that never arrived in time. The connection upstream may be slow or unresponsive." }
+  };
+
+  // Nginx akan replace string '__ERROR_CODE__' dengan status code asli (404, 500, dst)
+  const code = '503';
+  const info = errorMap[code] || { t: "Unknown Error", m: "Bahkan kucingnya bingung ini kenapa." };
+
+  document.getElementById('err-t').innerText = info.t;
+  document.getElementById('err-m').innerText = info.m;
+
+  const codeStr = code.toString().padEnd(3, "0");
+  document.getElementById('d1').textContent = codeStr[0];
+  document.getElementById('d2').textContent = codeStr[1];
+  document.getElementById('d3').textContent = codeStr[2];
+
+  const arena = document.querySelector('.chase-arena');
+  const yarnEl = document.getElementById('yarn');
+  const catEl = document.getElementById('cat');
+  const YW = 38, YH = 38, CW = 62, CH = 54;
+
+  let aw, ah;
+  function sz() {
+    aw = arena.offsetWidth || window.innerWidth;
+    ah = arena.offsetHeight || window.innerHeight;
+  }
+  sz();
+  window.addEventListener('resize', sz);
+
+  let yarn = { x: 0, y: 0, vx: 2.6, vy: 1.8 };
+  let cat = { x: 0, y: 0 };
+  yarn.x = aw * 0.6; yarn.y = ah * 0.4;
+  cat.x = aw * 0.25; cat.y = ah * 0.65;
+
+  let angle = 0;
+  function step() {
+    sz();
+    yarn.x += yarn.vx; yarn.y += yarn.vy;
+    if (yarn.x < 0) { yarn.x = 0; yarn.vx = Math.abs(yarn.vx); }
+    if (yarn.x > aw - YW) { yarn.x = aw - YW; yarn.vx = -Math.abs(yarn.vx); }
+    if (yarn.y < 0) { yarn.y = 0; yarn.vy = Math.abs(yarn.vy); }
+    if (yarn.y > ah - YH) { yarn.y = ah - YH; yarn.vy = -Math.abs(yarn.vy); }
+    if (Math.random() < 0.01) {
+      yarn.vx += (Math.random() - 0.5) * 1.6;
+      yarn.vy += (Math.random() - 0.5) * 1.6;
+      const s = Math.sqrt(yarn.vx * yarn.vx + yarn.vy * yarn.vy) || 1;
+      const t = 2.2 + Math.random() * 1.5;
+      yarn.vx = yarn.vx / s * t; yarn.vy = yarn.vy / s * t;
+    }
+    const ycx = yarn.x + YW / 2, ycy = yarn.y + YH / 2;
+    const ccx = cat.x + CW / 2, ccy = cat.y + CH / 2;
+    const dx = ycx - ccx, dy = ycy - ccy;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+    const sp = Math.min(2.2, dist * 0.05 + 1.0);
+    cat.x += dx / dist * sp; cat.y += dy / dist * sp;
+    cat.x = Math.max(0, Math.min(aw - CW, cat.x));
+    cat.y = Math.max(0, Math.min(ah - CH, cat.y));
+    angle += 3;
+    yarnEl.style.transform = `translate(${yarn.x}px,${yarn.y}px) rotate(${angle}deg)`;
+    catEl.style.transform = `translate(${cat.x}px,${cat.y}px) scaleX(${dx < 0 ? -1 : 1})`;
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+</script>
+
+</body>
+</html>
